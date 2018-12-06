@@ -5,7 +5,9 @@ __author__ = "Guillaume Genthial"
 import numpy as np
 import tensorflow as tf
 from tensorflow.python.ops.metrics_impl import _streaming_confusion_matrix
-
+import sys
+reload(sys)
+sys.setdefaultencoding("utf-8")
 
 def precision(labels, predictions, num_classes, pos_indices=None,
               weights=None, average='micro'):
